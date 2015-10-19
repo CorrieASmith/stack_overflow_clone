@@ -1,8 +1,9 @@
 <h4><%= @question.question %></h4>
-<p><%= link_to "Edit", edit_question_path %></p>
+<br>
+
+<p><%= link_to "Edit", edit_question_path(@question) %></p>
 <p><%= link_to "Delete", question_path(@question),
                          :data => {:confirm => "You sure you want to delete this question?",
                                    :method => "delete"} %></p>
-<br>
 <br>
 <p><%= link_to "Home", "/" %></p>
