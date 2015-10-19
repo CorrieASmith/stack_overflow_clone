@@ -19,10 +19,13 @@
 <% end %>
 
 <br>
+
+<% if current_user %>
 <p><%= link_to "Answer Question", new_question_answer_path(@question) %></p>
 
 <p><%= link_to "Edit", edit_question_path(@question) %></p>
 <p><%= link_to "Delete", question_path(@question),
                          :data => {:confirm => "You sure you want to delete this question?",
                                    :method => "delete"} %></p>
+<% end %>
 <br>
