@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  get '/' => 'home#index'
 
   resources :users
 end
