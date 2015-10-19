@@ -1,9 +1,9 @@
 <h3>Questions</h3>
-
+<br>
 <ul>
   <% @questions.each do |question| %>
     <li><%= link_to question.question, question_path(question) %></li>
   <% end %>
 </ul>
-
+<br>
 <%= link_to "New Question", new_question_path %>
