@@ -3,10 +3,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   before_save :encrypt_password
 
-  def current_user
-   @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
     self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
