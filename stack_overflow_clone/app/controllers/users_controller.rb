@@ -5,13 +5,13 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the site!"
       redirect_to "/"
     else
-  flash[:alert] = "There was a problem creating your account. Please try again."
-  redirect_to :back
+      flash[:alert] = "There was a problem creating your account. Please try again."
+      redirect_to :back
+    end
   end
-end
 
   private
-  
+
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
