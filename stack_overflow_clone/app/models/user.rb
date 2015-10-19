@@ -20,4 +20,13 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
+  def create
+    @user = User.new(params[:user])
+    if @user.save
+      UserMailer.signup_confirmation(@user).deliver
+    else
+      render :new
+    end
+  end
 end

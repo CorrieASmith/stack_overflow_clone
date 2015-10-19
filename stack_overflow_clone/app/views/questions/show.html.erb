@@ -5,6 +5,7 @@
   <h4>Here are the answers for this question:</h4>
     <ul>
     <% @question.answers.each do |answer| %>
+      <% if current_user %>
       <li>
         <%= answer.answer %> |
         <%= link_to "Edit", edit_question_answer_path(@question, answer) %> |
@@ -12,6 +13,7 @@
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
       </li>
+    <% end %>
     <% end %>
   </ul>
   <% else %>
