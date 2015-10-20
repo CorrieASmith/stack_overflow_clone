@@ -1,7 +1,6 @@
 <%= render "layouts/errors", :object => @question %>
 
 <%= form_for @question do |f| %>
-  <%= f.label :question %>
-  <%= f.text_field :question %>
-  <%= f.submit %>
+  <%= f.text_field :question, class: 'form-control', placeholder: "Ask A Question" %> <br>
+  <%= f.submit class:"btn btn-success" %>
 <% end %>

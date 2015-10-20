@@ -1,11 +1,21 @@
-<h3>Questions</h3>
-<br>
-<ul>
-  <% @questions.each do |question| %>
-    <li><%= link_to question.question, question_path(question) %></li>
-  <% end %>
-</ul>
-<br>
-<% if current_user %>
-<%= link_to "New Question", new_question_path %>
-<% end %>
+<div class = 'container'>
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Questions</h3>
+      <% if current_user %>
+      <%= link_to "New Question", new_question_path %>
+      <% end %>
+    </div>
+    <div class="col-md-10">
+      <br>
+      <ul id="indexwell">
+        <% @questions.each do |question| %>
+        <div class="well">
+          <li><%= link_to question.question, question_path(question) %></li>
+        </div>
+        <hr>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

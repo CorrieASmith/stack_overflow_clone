@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt'
 gem 'factory_girl_rails'
+gem 'rails_admin', '~> 0.7.0'
 
 group :development do
   gem 'byebug'
