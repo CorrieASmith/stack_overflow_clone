@@ -1,7 +1,6 @@
 <%= render('layouts/errors', :object => @answer) %>
 
 <%= form_for [@question, @answer] do |f| %>
-  <%= f.label :answer %>
-  <%= f.text_field :answer %>
-  <p><%= f.submit %></p>
+  <%= f.text_field :answer, class:'form-control', placeholder:'Answer Question' %> <br>
+  <p><%= f.submit class:'btn btn-success'%></p>
 <% end %>
