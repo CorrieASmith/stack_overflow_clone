@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: "railscasts@example.com"
+  default from: "stackoverflowclone@example.com"
 
   def signup_confirmation(user)
     @user = user

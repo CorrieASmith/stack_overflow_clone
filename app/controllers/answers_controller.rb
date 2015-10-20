@@ -8,6 +8,7 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
     @answer = @question.answers.new(answer_params)
     if @answer.save
+      flash[:notice] = "Thank you for submitting your answer!"
       redirect_to question_path(@answer.question)
     else
       render :new
